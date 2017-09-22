@@ -4,3 +4,9 @@ node_js:
 before_script:
   - npm install -g gulp-cli
 script: gulp
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
