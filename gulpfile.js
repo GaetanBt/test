@@ -16,7 +16,7 @@ gulp.task('clean-dist', function () {
 gulp.task('minify', ['clean-dist'], function () {
   return gulp.src('src/index.html')
     .pipe(inlinesource())
-    // .pipe(htmlmin(htmlminConfig))
+    .pipe(htmlmin(htmlminConfig))
     .pipe(gulp.dest('dist'))
 })
 
